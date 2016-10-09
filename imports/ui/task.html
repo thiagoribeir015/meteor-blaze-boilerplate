@@ -1,0 +1,13 @@
+<template name="task">
+    <li class="{{#if checked}}checked{{/if}}" style="margin-top: 5px;">
+        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+        <span class="text" style="{{#if checked}}text-decoration:line-through;{{/if}}">
+	    	{{text}} [{{formatDate createdAt 'MM-DD'}}] 
+	    </span>
+
+        <button class="btn btn-xs delete">
+        	 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </li>
+</template>

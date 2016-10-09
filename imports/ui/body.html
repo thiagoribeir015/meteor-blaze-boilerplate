@@ -1,0 +1,22 @@
+<body>
+  <div class="container">
+    <header>
+      	<h1>Todo List ({{incompleteTasksCount}})</h1>
+
+      	<label class="hide-completed">
+         	<input type="checkbox" />
+         	Hide Completed Tasks
+      	</label>
+
+      	<form class="new-task">
+        	<input type="text" class="form-control" name="text" placeholder="Type to add new tasks" style="width: 200px;" />
+      	</form>
+    </header>
+ 
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
